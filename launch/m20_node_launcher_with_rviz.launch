@@ -1,0 +1,14 @@
+<launch>
+
+<arg name="sensor_ip_" default="" doc="YLM sensor IP address. (Optional usage if pcap specified) It can be used to filter traffic when playing back a PCAP file."/>
+<arg name="sensor_port_" default="10940" doc="Lumotive sensor UDP port number"/>
+
+<node pkg="ylm_ros" name="lumotive_driver" type="lumotive_driver" output="screen">
+		<rosparam command="load" file="$(find ylm_ros)/config/m20_configs.yaml"/>
+		<param name="sensor_ip" type="str" value="$(arg sensor_ip_)" />
+		<param name="sensor_port" type="int" value="$(arg sensor_port_)" />
+        </node>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find ylm_ros)/rviz/m20_default.rviz" required="true" />
+
+</launch>

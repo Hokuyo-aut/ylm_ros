@@ -1,0 +1,15 @@
+# More information can be found in the README config file presentation section
+# General device params
+device_frame_id: "m20_lidar"
+
+# Driver params
+nb_packets_in_array_msg: 0 # Override for the number of packets per array (0 = automatically computed by driver based on FoV size)
+organized_cloud: false # unorganized pointclouds allow for a smaller payload, organized pointcloud can be processed/converted to images
+color_range_max: 12.0 # color palette range in meters when converting point cloud to depth map (wraps around beyond that point)
+colormap_name: 'turbo' # color palette choice: turbo, inferno, viridis
+color_by_reflectivity: false # point cloud coloring by reflectivity
+range_min: 0.0 # meters, minimum range of a valid detection
+range_max: 30.0 # meters, maximum range of a valid detection
+
+min_brightness: 0.2 # enter a value in range [0., 1.0)
+max_brightness: 10000.0 # this is the maximum value that the reflectivity can take. If this is too high, everything will appear dark

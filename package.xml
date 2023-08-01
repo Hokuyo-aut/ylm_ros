@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ylm_ros</name>
+  <version>2.0.0</version>
+  <description>The ylm_ros driver designed to interface with YLM sensors</description>
+  <url>https://www.hokuyo-aut.co.jp/</url>
+
+  <maintainer email="c-support@hokuyo-aut.co.jp">Hokuyo</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>roslib</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-lxml</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-ruamel.yaml</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-rospkg</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-pathlib2</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-lxml</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-ruamel.yaml</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-rospkg</exec_depend>
+  <test_depend>rosunit</test_depend>
+  <doc_depend>doxygen</doc_depend> 
+
+  <export>
+  </export>
+</package>
